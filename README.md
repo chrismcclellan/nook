@@ -9,7 +9,7 @@
 
 ## Installation
 
-Navigate to your code directory (or wherever your dev directory is)
+Navigate to your code directory (or wherever you stash projects)
 ```
 cd ~\code
 ```
