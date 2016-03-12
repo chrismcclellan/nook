@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{config.site_settings.site_name}}</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script src="https://use.typekit.net/lvx5hwc.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+
+{{!--
+    <style>
+        {{> partials/assets/css/app}}
+    </style>
+ --}}
+
+  </head>
+
+<body class="{{join classes delimeter=" "}}">
+
+  <div class="off-canvas-wrapper">
+
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+      {{!-- off-canvas right menu --}}
+      {{> partials/off-canvas/right}}
+
+      <!-- original content goes in this container -->
+      <div class="off-canvas-content" data-off-canvas-content>
+
+          {{{body}}}
+
+      </div>
+
+      <!-- close wrapper, no more content after this -->
+    </div><!-- /.off-canvas-wrapper-inner -->
+  </div><!-- /.off-canvas-wrapper -->
+
+  <script>
+
+    // BOOTSTRAP OBJECT
+    window.bootstrap = {{{JSONStringify config}}};
+
+  </script>
+
+  <script src="/js/vendor.js"></script>
+  <script src="/js/app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+
+<!-- "wider" top-bar menu for 'medium' and up -->
+<div id="widemenu" class="top-bar top-bar-default">
+
+    <div class="block ad row expanded">
+      {{> partials/ads/other/970x250}}
+    </div>
+
+    <div class="row expanded top-bar-inner-wrapper">
+
+        <div class="top-bar-title">
+          <figure>
+            <a href="/">
+                <img src="/images/logo.svg">
+            </a>
+          </figure>
+        </div>
+
+        {{#if config.navigation.top_bar_left}}
+          <div class="top-bar-left">
+              <ul class="menu">
+                {{#each config.navigation.top_bar_left}}
+                  <li>
+                      <a class="navigate" href="{{path}}">
+                       <span>{{label}}</span>
+                      </a>
+                  </li>
+                {{/each}}
+              </ul>
+          </div>
+        {{/if}}
+
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li>
+              <a href="#" class="search">
+                {{> partials/assets/svg/search-icon}}
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hamburger" data-toggle="offCanvasRight">
+                {{> partials/assets/svg/hamburger}}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+    </div>{{!-- /.top-bar-inner-wrapper --}}
+</div>{{!-- /#widemenu --}}

@@ -1,0 +1,68 @@
+{{!JSONStringify config.share}}
+
+{{> partials/search-form/default}}
+
+{{> partials/top-bar/default}}
+
+{{#each posts}}
+
+    <article class="row collapse expanded" id="post-{{id}}" data-post-id="{{postID}}" data-blog-id="{{blogID}}" >
+
+        {{> pages/post/partials/canopy}}
+
+        <div class="diagonal-divider"></div>
+
+        <div class="row main-wrapper collapse">
+
+            {{!header-outer-wrapper}}
+            <div class="header-outer-wrapper small-12 columns">
+                <div class="header-inner-wrapper">
+                    {{> pages/post/partials/header config=../config}}
+                </div>
+            </div>
+
+            {{!header-outer-wrapper}}
+            <div class="content-outer-wrapper small-12 columns">
+                <div class="content-inner-wrapper">
+                    {{> pages/post/partials/content}}
+                </div>
+            </div>
+
+            {{!foooter-outer-wrapper}}
+            <div class="footer-outer-wrapper small-12 columns">
+
+                <div class="footer-inner-wrapper">
+                    <footer class="footer">
+                        <div class="row align-middle">
+                            <div class="small-8 columns">
+                                {{> pages/post/partials/blocks/byline}}
+                            </div>
+                            <div class="small-4 columns">
+                                <p class="pubdate float-right">
+                                    <a href="/date/{{dateFormat prostDate format="MM/DD/YY"}}">
+                                        <time datetime="{{postDate}}">{{dateFormat postDate format="MMMM D, YYYY"}}</time>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        {{#with ../config.share}}
+                            {{> partials/share-this/default}}
+                        {{/with}}
+                    </footer>
+                </div>
+            </div>
+
+        </div>{{!-- /.main-wrapper --}}
+
+    </article>{{!-- /.row.collapse.expanded --}}
+
+    <script>console.log({{{JSONStringify ../config}}});</script>
+
+    {{#with ../config}}
+        {{> partials/ribbons/related/default}}
+        {{> partials/ribbons/start-a-chapter/default}}
+        {{> partials/ribbons/connect/default}}
+    {{/with}}
+
+{{/each}}

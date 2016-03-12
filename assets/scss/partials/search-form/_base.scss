@@ -1,0 +1,79 @@
+#search-form {
+    z-index: 9999999;
+    display: block;
+    background: $black;
+    height: 160px;
+    padding: 0;
+    overflow: hidden;
+    @include transform(translateZ(999999999));
+    @include transition(all .6s cubic-bezier(.87,-.41,.19,1.44));
+
+    &.error {
+        background: $color-red;
+    }
+
+    &.has-value .button {
+        @include transform(scale(1));
+    }
+
+    form {
+        padding: 0;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .input-group {
+        margin: 0;
+        padding: 0;
+    }
+
+    input,
+    .input-group-label {
+        height: 80px;
+        line-height: 80px;
+        font-size: rem-calc(32);
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: 0 none;
+        color: $white;
+        @include box-shadow(none);
+    }
+
+    .button {
+        text-transform: uppercase;
+        font-size: rem-calc(20);
+        padding: 0 48px;
+        // color: rgba($white, .5);
+        // border: 1px solid rgba($white, .3);
+        color: $white;
+        border: 1px solid $white;
+        @include border-radius(3px);
+        @include transform(scale(0));
+        @include transition(all .6s cubic-bezier(.87,-.41,.19,1.44));
+
+        &:hover {
+            color: $white;
+            border-color: $white;
+        }
+    }
+
+    #q,
+    .input-group-label {
+        font-family: $font-family-monospace;
+    }
+
+    #q {
+        color: $secondary-color;
+    }
+}
+
+body:not(.search-form-open):not(.search) #search-form,
+.feelings-pushdown-open #search-form {
+    height: 0;
+}
+
+// body.page-search #search-form {
+//     height: 0 !important;
+// }
