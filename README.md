@@ -1,4 +1,4 @@
-# Scrape (A Nook sails.js app)
+# Nook
 
 ## Requirements
 

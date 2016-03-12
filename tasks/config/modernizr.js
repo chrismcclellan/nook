@@ -1,13 +1,10 @@
 /**
- * Clean files and folders.
+ * Modernizr build.
  *
  * ---------------------------------------------------------------
  *
- * This grunt task is configured to clean out the contents in the .tmp/public of your
- * sails project.
- *
  * For usage docs see:
- *      https://github.com/gruntjs/grunt-contrib-clean
+ *      https://github.com/gruntjs/grunt-modernizr
  */
 module.exports = function(grunt) {
 
