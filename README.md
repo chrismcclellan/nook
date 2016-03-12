@@ -16,14 +16,14 @@ cd ~\code
 
 Clone the repository to your local dev environment
 ```bash
-git clone git@github.com:chrismcclellan/scrape.git
+git clone git@github.com:chrismcclellan/nook.git
 ```
 
 ## Development
 
 Navigate to your project folder
 ```bash
-cd scrape
+cd nook
 ```
 
 While working on your project, run the following commands:
