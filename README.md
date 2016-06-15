@@ -1,4 +1,5 @@
 # Nook
+Webpack and Backbone on Sails.js and MongoDB
 
 ## Requirements
 
